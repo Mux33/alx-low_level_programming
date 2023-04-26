@@ -8,19 +8,14 @@
  *
  * Return: last digit.
  */
-int print_last_digit(int n)
+int main(void)
 {
-	int l;
+    int r;
 
-	l = n % 10;
-	if (l < 0)
-	{
-		_putchar(-l + 98);
-		return (-l);
-	}
-	else
-	{
-		_putchar(l +98);
-		return (l);
-	}
+    print_last_digit(98);
+    print_last_digit(0);
+    r = print_last_digit(-1024);
+    _putchar('0' + r);
+    _putchar('\n');
+    return (0);
 }
