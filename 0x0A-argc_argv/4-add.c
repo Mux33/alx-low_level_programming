@@ -10,12 +10,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int result = 0, num, i, j;
-
-	if (argc == 1)
-	{
-		printf("0\n");
-	}
+	int result = 0, num, i, j, k;
 
 	for (i = 1; i < argc; i++)
 	{
@@ -28,8 +23,12 @@ int main(int argc, char *argv[])
 			}
 		}
 	}
-	num = atoi(argv[i]);
-	result += num;
+
+	for (k = 1; k < argc; k++)
+	{
+		num = atoi(argv[k]);
+		result += num;
+	}
 	{
 		printf("%d\n", result);
 		return (0);
